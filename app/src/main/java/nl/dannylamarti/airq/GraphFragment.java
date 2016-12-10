@@ -106,6 +106,9 @@ public class GraphFragment extends Fragment implements Runnable {
     private LineGraphSeries getLineData() {
         final List<DataPoint> points = new ArrayList();
 
+        for (int i = 0; i < measurements.size(); i++) {
+
+        }
         for (Measurement measurement : measurements) {
             final Date date = measurement.getDateTime();
             final DataPoint dataPoint = new DataPoint(

@@ -76,6 +76,10 @@ public class Measurements implements Iterable<Measurement>, ValueEventListener {
         return measurement;
     }
 
+    public int size() {
+        return children.size();
+    }
+
     private final class MeasurementIterator implements Iterator<Measurement> {
 
         private final Iterator<DataSnapshot> it;
