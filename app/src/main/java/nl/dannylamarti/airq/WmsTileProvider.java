@@ -4,8 +4,6 @@ import android.support.annotation.NonNull;
 
 import com.google.android.gms.maps.model.UrlTileProvider;
 
-import org.apache.commons.io.IOUtils;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Locale;
@@ -17,73 +15,58 @@ public class WmsTileProvider extends UrlTileProvider {
 
     public final static String KADASTRAL_WMS_URL = "http://geodata.nationaalgeoregister.nl/kadastralekaartv2/wms";
     public final static String TEST_WMS_URL = "https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StateCityHighway_USA/MapServer/export";
+    // "https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StateCityHighway_USA/MapServer/export?bbox=%s&bboxSRS=3857&layers=&layerdefs=&size=256&imageSR=3857&format=png&transparent=true&dpi=90&time=&layerTimeOptions=&f=image";
+    public final static String SNOWY_MAP = "http://ows.terrestris.de/osm-gray/service?LAYERS=OSM-WMS&EXCEPTIONS=application%2Fvnd.ogc.se_inimage&UID=268c5d67&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&FORMAT=image%2Fjpeg&SRS=EPSG%3A4326&BBOX=--1--,--2--,--3--,--4--&WIDTH=256&HEIGHT=256";
+    public final static String BRIEVENBUSSEN_MAP = "https://services.geodan.nl/public/data/my/gws/POST4277VOOR/wms?LAYERS=brievenbussen_d027e429-2dcc-4171-97f8-f6ab7fa8e861&TRANSPARENT=TRUE&EXCEPTIONS=application%2Fvnd.ogc.se_inimage&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&FORMAT=image%2Fpng&SRS=EPSG%3A4326&SLD=https%3A%2F%2Fservices.geodan.nl%2Fpublic%2Fdocument%2FPOST4277VOOR%2Fapi%2Fdata%2FPOST4277VOOR%2Fstyles%2FPOST4277VOOR_public%3Abrievenbussen_d027e429-2dcc-4171-97f8-f6ab7fa8e861%3Abrievenbussen&PUP=1480942279829&BBOX=--1--,--2--,--3--,--4--&WIDTH=256&HEIGHT=256&servicekey=bb5cd4d3-b180-11e6-84a1-005056805b87";
+    public final static String AIRQ_MAP = "https://services.geodan.nl/public/data/my/gws/GEOD2219HACK/wms" +
+            "?request=getmap" +
+            "&featuretype=test_423a776e-a626-404c-bcdd-4e403a548a65" +
+            "&WIDTH=256" +
+            "&HEIGHT=256" +
+            "&TRANSPARENT=TRUE" +
+            "&LAYERS=" +
+            "&EXCEPTIONS=application%2Fvnd.ogc.se_inimage" +
+            "&SERVICE=WMS" +
+            "&VERSION=1.1.1" +
+            "&FORMAT=image%2Fpng" +
+            "&SRS=EPSG%3A4326" +
+            "&BBOX=--1--,--2--,--3--,--4--";
+    public final static String AIRQ_MAP_PRETTY = "https://services.geodan.nl/public/data/my/gws/GEOD2219HACK/wms\n" +
+            "?request=getmap\n" +
+            "\t&featuretype=test_423a776e-a626-404c-bcdd-4e403a548a65\n" +
+            "\t&WIDTH=256\n" +
+            "\t&HEIGHT=256\n" +
+            "\t&TRANSPARENT=TRUE\n" +
+            "\t&LAYERS=\n" +
+            "\t&EXCEPTIONS=application%2Fvnd.ogc.se_inimage\n" +
+            "\t&SERVICE=WMS\n" +
+            "\t&VERSION=1.1.1\n" +
+            "\t&FORMAT=image%2Fpng\n" +
+            "\t&SRS=EPSG%3A4326\n" +
+            "\t&BBOX=--1--,--2--,--3--,--4--";
 
+    private final String source;
 
-    private static final String WMS_FORMAT = "%s" +
-            "?bbox=%s" +
-            "&bboxSR=%s" +
-            "&layers=%s" +
-            "&layerdefs=%s" +
-            "&size=%d" +
-            "&imageSR=%s" +
-            "&format=%s" + //png,png8,png24,jpg,pdf,bmp,gif, svg
-            "&transparent=%b" +
-            "&dpi=%d" +
-            "&time=%s" +
-            "&layerTimeOptions=%s" +
-            "&format=%s"; // html,image,kmz,json
-
-    private static final String GEOSERVER_FORMAT = "%s" +
-            "?service=WMS" +
-            "&version=1.1.1" +
-            "&request=GetMap" +
-            "&layers=yourLayer" +
-            "&bbox=%f,%f,%f,%f" +
-            "&width=256" +
-            "&height=256" +
-            "&srs=EPSG:900913" +
-            "&format=image/png" +
-            "&transparent=true";
-
-
-    private static final double[] TILE_ORIGIN = {-20037508.34789244, 20037508.34789244};
-    private static final int ORIG_X = 0;
-    private static final int ORIG_Y = 1;
-    private static final double MAP_SIZE = 20037508.34789244 * 2;
-
-    protected static final int MINX = 0;
-    protected static final int MAXX = 1;
-    protected static final int MINY = 2;
-    protected static final int MAXY = 3;
-
-    public WmsTileProvider() {
-        super(256, 256);
+    public WmsTileProvider(String source) {
+        this(256, 256, source);
     }
 
-    public WmsTileProvider(int width, int height) {
+    public WmsTileProvider(int width, int height, String source) {
         super(width, height);
-    }
-
-    protected double[] getBoundingBox(int x, int y, int zoom) {
-        double tileSize = MAP_SIZE / Math.pow(2, zoom);
-        double minx = TILE_ORIGIN[ORIG_X] + x * tileSize;
-        double maxx = TILE_ORIGIN[ORIG_X] + (x + 1) * tileSize;
-        double miny = TILE_ORIGIN[ORIG_Y] - (y + 1) * tileSize;
-        double maxy = TILE_ORIGIN[ORIG_Y] - y * tileSize;
-
-        double[] bbox = new double[4];
-
-        bbox[MINX] = minx;
-        bbox[MINY] = miny;
-        bbox[MAXX] = maxx;
-        bbox[MAXY] = maxy;
-
-        return bbox;
+        this.source = source;
     }
 
     @Override
     public URL getTileUrl(int x, int y, int zoom) {
-        return getUrl("https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StateCityHighway_USA/MapServer/export?bbox=-10018754.171394622%2C5009377.085697312%2C-7514065.628545966%2C7514065.628545968&bboxSR=3857&layers=&layerdefs=&size=256&imageSR=3857&format=png&transparent=true&dpi=90&time=&layerTimeOptions=&f=image");
+        final WmsTileBounds bounds = new WmsTileBounds(x, y, zoom);
+        final String text = source
+                .replace("--1--", String.format(Locale.US, "%.5f", bounds.lonMin))
+                .replace("--2--", String.format(Locale.US, "%.5f", bounds.latMax))
+                .replace("--3--", String.format(Locale.US, "%.5f", bounds.lonMax))
+                .replace("--4--", String.format(Locale.US, "%.5f", bounds.latMin));
+        final URL url = getUrl(text);
+
+        return url;
     }
 
     @NonNull

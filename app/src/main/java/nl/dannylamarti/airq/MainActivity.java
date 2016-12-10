@@ -23,7 +23,7 @@ import java.util.Iterator;
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback, Runnable {
 
     private GoogleMap map;
-    private final MeasurementList list = new MeasurementList();
+    private final Measurements measurements = new Measurements();
     private final Collection<Marker> markers = new HashSet<>();
 
     @Override
@@ -35,17 +35,17 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        list.setObserver(this);
+        measurements.setObserver(this);
 
         FirebaseDatabase.getInstance()
                 .getReference("data")
-                .addValueEventListener(list);
+                .addValueEventListener(measurements);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        list.setObserver(null);
+        measurements.setObserver(null);
     }
 
     @Override
@@ -62,18 +62,18 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 0
         );
         final TileOverlayOptions overlayOptions = new TileOverlayOptions()
-                .tileProvider(new WmsTileProvider());
+                .tileProvider(new WmsTileProvider(WmsTileProvider.AIRQ_MAP));
 
         map = googleMap;
         map.moveCamera(update);
-        map.setMapType(GoogleMap.MAP_TYPE_NONE);
+        map.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
         map.addTileOverlay(overlayOptions);
     }
 
     @Override
     public void run() {
         removeMarkers();
-        addMarkers();
+//        addMarkers();
     }
 
     private void removeMarkers() {
@@ -88,7 +88,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addMarkers() {
-        for (Measurement measurement : list) {
+        for (Measurement measurement : measurements) {
             final float quality = measurement.getAirQuality();
             final float hue = (quality * 1.8f + 330f) % 360f;
             final LatLng latLng = new LatLng(
