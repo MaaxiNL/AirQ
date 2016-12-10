@@ -2,23 +2,25 @@ package nl.dannylamarti.airq;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
 import com.google.firebase.database.FirebaseDatabase;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.text.SimpleDateFormat;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,11 +34,12 @@ import nl.dannylamarti.airq.model.Measurements;
 
 public class GraphFragment extends Fragment implements Runnable {
 
+    @BindView(R.id.content) View content;
     @BindView(R.id.place) TextView place;
     @BindView(R.id.rating) TextView rating;
     @BindView(R.id.remark) TextView remark;
     @BindView(R.id.quote) TextView quote;
-    @BindView(R.id.chart) LineChart chart;
+    @BindView(R.id.chart) GraphView chart;
 
     private final SimpleDateFormat dateFormatter = new SimpleDateFormat("mm-dd");
     private final Measurements measurements = new Measurements();
@@ -75,40 +78,56 @@ public class GraphFragment extends Fragment implements Runnable {
 
     @Override
     public void run() {
-        if (!measurements.isEmpty()) {
-            final float airQuality = measurements.getFirst().getAirQuality();
-            final AirState state = AirState.fromAirQuality(airQuality);
-            final Activity context = getActivity();
-            final LineData data = getLineData();
+        final Activity context = getActivity();
 
+        if (!measurements.isEmpty()) {
+            final float airQuality = measurements.getLast().getAirQuality();
+            final AirState state = AirState.fromAirQuality(airQuality);
+            final LineGraphSeries data = getLineData();
+
+            content.setBackgroundColor(state.getColor(context));
             rating.setText("" + ((int) airQuality));
             remark.setText(state.getRemark(context));
             quote.setText(state.getQuote(context));
-            chart.setData(data);
+            chart.removeAllSeries();
+            chart.addSeries(data);
         } else {
+            final int color = ContextCompat.getColor(context, R.color.colorPrimary);
+
+            content.setBackgroundColor(color);
             rating.setText(":-(");
             remark.setText("No data available yet");
             quote.setText("");
-            chart.clear();
+            chart.removeAllSeries();
         }
     }
 
     @NonNull
-    private LineData getLineData() {
-        final LineData data = new LineData();
+    private LineGraphSeries getLineData() {
+        final List<DataPoint> points = new ArrayList();
 
+        for (int i = 0; i < measurements.size(); i++) {
+
+        }
         for (Measurement measurement : measurements) {
             final Date date = measurement.getDateTime();
-            final Entry entry = new Entry(date.getTime(), measurement.getAirQuality());
-            final LineDataSet dataSet = new LineDataSet(
-                    Collections.singletonList(entry),
-                    dateFormatter.format(date)
+            final DataPoint dataPoint = new DataPoint(
+                    date.getTime(),
+                    measurement.getAirQuality()
             );
 
-            data.addDataSet(dataSet);
+            points.add(dataPoint);
         }
 
-        return data;
+        final LineGraphSeries series = new LineGraphSeries(points.toArray(new DataPoint[points.size()]));
+
+        series.setTitle("Random Curve 1");
+        series.setColor(Color.RED);
+        series.setDrawDataPoints(true);
+        series.setDataPointsRadius(10);
+        series.setThickness(8);
+
+        return series;
     }
 
 }

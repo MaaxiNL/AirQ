@@ -10,7 +10,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adbe7335-b2bd-4bab-b419-499b6a0d5d51" name="Default" comment="" />
+    <list default="true" id="adbe7335-b2bd-4bab-b419-499b6a0d5d51" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java" />
+    </list>
     <ignored path="AirQ.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,6 +45,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="AirState.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/AirState.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,11 +55,60 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#1346#1347#0" expanded="true" />
                 <element signature="e#1379#1380#0" expanded="true" />
+=======
+      <file leaf-file-name="graph.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/graph.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="108" column="43" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+>>>>>>> develop
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="Measurements.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1901#1902#0" expanded="true" />
+                <element signature="e#1939#1940#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> develop
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -787,6 +840,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.jjoe64:graphview:4.2.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComJjoe64Graphview421Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:support-core-utils:25.0.1" />
@@ -1637,6 +1695,11 @@
                 <option name="name" value="generateDebugAndroidTestResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.jjoe64:graphview:4.2.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComJjoe64Graphview421Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:support-core-utils:25.0.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComAndroidSupportSupportCoreUtils2501Library" />
@@ -1808,7 +1871,11 @@
     </option>
     <option name="modificationStamps">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="4444197796000" />
+=======
+        <entry key="$PROJECT_DIR$" value="4444203789000" />
+>>>>>>> develop
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2160,17 +2227,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/Measurements.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/WmsTileBounds.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/WmsTileProvider.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/graph.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/providers/WmsTileProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/AirState.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/AirFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurement.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/graph.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java" />
       </list>
     </option>
@@ -2239,6 +2306,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="AirQ" />
@@ -2309,6 +2377,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+=======
+>>>>>>> develop
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -2413,7 +2483,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../friendlychat/android-start" />
     <property name="device.picker.selection" value="00d17e977aa40fc3" />
-    <property name="SearchEverywhereHistoryKey" value="UrlTileP&#9;FILE&#9;jar:///Users/danny.lamarti/Projects/AirQ/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar!/com/google/android/gms/maps/model/UrlTileProvider.class&#10;App&#9;FILE&#9;file:///Users/danny.lamarti/Projects/AirQ/app/src/main/java/nl/dannylamarti/airq/App.java" />
+    <property name="SearchEverywhereHistoryKey" value="GraphFra&#9;FILE&#9;file:///Users/danny.lamarti/Projects/AirQ/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java&#10;UrlTileP&#9;FILE&#9;jar:///Users/danny.lamarti/Projects/AirQ/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar!/com/google/android/gms/maps/model/UrlTileProvider.class&#10;App&#9;FILE&#9;file:///Users/danny.lamarti/Projects/AirQ/app/src/main/java/nl/dannylamarti/airq/App.java" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPropertiesWindowManager-NlEditorPanel.SHOW" value="false" />
@@ -2782,11 +2852,11 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24874371" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31862378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2981455" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4550642" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19686162" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2796,7 +2866,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27449512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23934181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952926" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2850,38 +2920,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java</url>
-          <line>48</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurement.java</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java</url>
+          <line>92</line>
           <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="43" />
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="54" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="app">
-        <watch expression="snapshot.getChildrenCount()" language="JAVA" custom="" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-25/android.jar!/android/os/Looper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -2910,6 +2965,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> develop
     <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/providers/TestTileProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -2925,10 +2982,16 @@
         <state relative-caret-position="540">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="e#1196#1197#0" expanded="false" />
             <element signature="e#1228#1229#0" expanded="false" />
             <element signature="e#1515#1516#0" expanded="false" />
+=======
+            <element signature="imports" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
@@ -2996,11 +3059,17 @@
         <state relative-caret-position="420">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="e#489#490#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#567#568#0" expanded="false" />
             <element signature="e#634#635#0" expanded="false" />
+=======
+            <element signature="imports" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
@@ -3048,10 +3117,16 @@
         <state relative-caret-position="330">
           <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="e#1196#1197#0" expanded="false" />
             <element signature="e#1228#1229#0" expanded="false" />
             <element signature="e#1515#1516#0" expanded="false" />
+=======
+            <element signature="imports" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
@@ -3061,11 +3136,17 @@
         <state relative-caret-position="300">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="e#489#490#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#567#568#0" expanded="false" />
             <element signature="e#634#635#0" expanded="false" />
+=======
+            <element signature="imports" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
@@ -3159,6 +3240,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-210">
@@ -3177,6 +3259,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> develop
     <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/providers/MoonTileProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -3220,7 +3304,11 @@
         <state relative-caret-position="217">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
+=======
+            <element signature="imports" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
@@ -3260,41 +3348,114 @@
     </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-25/android.jar!/android/os/Looper.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="30">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
             <element signature="e#593#594#0" expanded="true" />
             <element signature="e#644#645#0" expanded="true" />
+=======
+        <state relative-caret-position="225">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-25/android.jar!/java/text/SimpleDateFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/AirState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="392">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="34" column="47" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="47" />
+        <state relative-caret-position="260">
+          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.1/3dc9fb0b08b8188e19caffcd9f0a9766e9fb52a6/MPAndroidChart-v3.0.1-sources.jar!/com/github/mikephil/charting/charts/LineChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.1/3dc9fb0b08b8188e19caffcd9f0a9766e9fb52a6/MPAndroidChart-v3.0.1-sources.jar!/com/github/mikephil/charting/charts/BarLineChartBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="1470" column="16" selection-start-line="1470" selection-start-column="16" selection-end-line="1470" selection-end-column="16" />
+          <folding>
+            <element signature="e#46458#46459#0" expanded="true" />
+            <element signature="e#46504#46505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/graph.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="108" column="43" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+          <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="e#489#490#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#567#568#0" expanded="false" />
             <element signature="e#634#635#0" expanded="false" />
+=======
+            <element signature="imports" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="148">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
@@ -3314,6 +3475,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1346#1347#0" expanded="true" />
             <element signature="e#1379#1380#0" expanded="true" />
+=======
+        <state relative-caret-position="301">
+          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+>>>>>>> develop
           </folding>
         </state>
       </provider>
