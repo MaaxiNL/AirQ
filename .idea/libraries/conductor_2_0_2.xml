@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="conductor-2.0.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.bluelinelabs/conductor/2.0.2/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.bluelinelabs/conductor/2.0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bluelinelabs/conductor/2.0.2/ab526a3fc45cec04cd827a7dada0d4482a32c27e/conductor-2.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "497941731840",
+    "firebase_url": "https://airq-5d2b0.firebaseio.com",
+    "project_id": "airq-5d2b0",
+    "storage_bucket": "airq-5d2b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497941731840:android:2a40a21acd44c115",
+        "android_client_info": {
+          "package_name": "nl.dannylamarti.airq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497941731840-2jqnnac2jnbl7rcublr6b4fiha9jl5he.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nl.dannylamarti.airq",
+            "certificate_hash": "A0A24A295D936E4173774B888601D9F05CFAEBC4"
+          }
+        },
+        {
+          "client_id": "497941731840-b124l1pr9rk6ttf2uvlb5507so09lc94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnrUgBTs1VSB1UTUFEftgrZq2-tWz4Lfs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497941731840-b124l1pr9rk6ttf2uvlb5507so09lc94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "497941731840-oii6m1du3lor73htae28kasj1t29aga8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "nl.kairadiagne.AirQ"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

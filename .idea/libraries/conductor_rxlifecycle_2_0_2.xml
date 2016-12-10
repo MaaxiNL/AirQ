@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="conductor-rxlifecycle-2.0.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.bluelinelabs/conductor-rxlifecycle/2.0.2/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.bluelinelabs/conductor-rxlifecycle/2.0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bluelinelabs/conductor-rxlifecycle/2.0.2/93c7eee4a02a4d72c5c8639c8d5d602b30d014bc/conductor-rxlifecycle-2.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
