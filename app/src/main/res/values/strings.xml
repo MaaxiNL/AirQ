@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">AirQ</string>
     <string name="title_activity_main">Map</string>
+    <string name="excellent_air">Excellent Air Quality</string>
+    <string name="fair_air">Fair Air Quality</string>
+    <string name="moderate_air">Moderate Air Quality</string>
+    <string name="low_air">Low Air Quality</string>
+    <string name="poor_air">Poor Air Quality</string>
 </resources>
