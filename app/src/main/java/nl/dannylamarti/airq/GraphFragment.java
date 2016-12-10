@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +16,11 @@ import android.widget.TextView;
 
 import com.google.firebase.database.FirebaseDatabase;
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -38,10 +39,9 @@ public class GraphFragment extends Fragment implements Runnable {
     @BindView(R.id.place) TextView place;
     @BindView(R.id.rating) TextView rating;
     @BindView(R.id.remark) TextView remark;
-    @BindView(R.id.quote) TextView quote;
+    @BindView(R.id.message) TextView message;
     @BindView(R.id.chart) GraphView chart;
 
-    private final SimpleDateFormat dateFormatter = new SimpleDateFormat("mm-dd");
     private final Measurements measurements = new Measurements();
     private Unbinder unbinder;
 
@@ -66,7 +66,20 @@ public class GraphFragment extends Fragment implements Runnable {
 
         unbinder = ButterKnife.bind(this, view);
         measurements.setObserver(this);
+        initGraph();
         run();
+    }
+
+    private void initGraph() {
+        final int white = ContextCompat.getColor(getActivity(), android.R.color.white);
+        final int transparent = ContextCompat.getColor(getActivity(), android.R.color.transparent);
+        final GridLabelRenderer renderer = chart.getGridLabelRenderer();
+
+        renderer.setGridColor(transparent);
+        renderer.setVerticalLabelsColor(white);
+        renderer.setHorizontalLabelsColor(white);
+        renderer.setHorizontalAxisTitle("minutes");
+        renderer.setHorizontalAxisTitleColor(white);
     }
 
     @Override
@@ -81,14 +94,14 @@ public class GraphFragment extends Fragment implements Runnable {
         final Activity context = getActivity();
 
         if (!measurements.isEmpty()) {
-            final float airQuality = measurements.getLast().getAirQuality();
+            final float airQuality = measurements.getFirst().getAirQuality();
             final AirState state = AirState.fromAirQuality(airQuality);
             final LineGraphSeries data = getLineData();
 
             content.setBackgroundColor(state.getColor(context));
             rating.setText("" + ((int) airQuality));
             remark.setText(state.getRemark(context));
-            quote.setText(state.getQuote(context));
+            message.setText(state.getMessage(context));
             chart.removeAllSeries();
             chart.addSeries(data);
         } else {
@@ -97,7 +110,7 @@ public class GraphFragment extends Fragment implements Runnable {
             content.setBackgroundColor(color);
             rating.setText(":-(");
             remark.setText("No data available yet");
-            quote.setText("");
+            message.setText("");
             chart.removeAllSeries();
         }
     }
@@ -105,27 +118,24 @@ public class GraphFragment extends Fragment implements Runnable {
     @NonNull
     private LineGraphSeries getLineData() {
         final List<DataPoint> points = new ArrayList();
+        final DisplayMetrics metrics = getResources().getDisplayMetrics();
+        final int thickness = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, metrics);
 
-        for (int i = 0; i < measurements.size(); i++) {
-
-        }
-        for (Measurement measurement : measurements) {
-            final Date date = measurement.getDateTime();
+        for (int i = 0; i < 120 && i < measurements.size(); i++) {
+            final Measurement measurement = measurements.get(i);
             final DataPoint dataPoint = new DataPoint(
-                    date.getTime(),
+                    i,
                     measurement.getAirQuality()
             );
 
             points.add(dataPoint);
         }
 
-        final LineGraphSeries series = new LineGraphSeries(points.toArray(new DataPoint[points.size()]));
+        final DataPoint[] array = points.toArray(new DataPoint[points.size()]);
+        final LineGraphSeries series = new LineGraphSeries(array);
 
-        series.setTitle("Random Curve 1");
-        series.setColor(Color.RED);
-        series.setDrawDataPoints(true);
-        series.setDataPointsRadius(10);
-        series.setThickness(8);
+        series.setColor(Color.WHITE);
+        series.setThickness(thickness);
 
         return series;
     }

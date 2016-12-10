@@ -24,7 +24,7 @@ public enum AirState {
         } else if (airQuality <= 80) {
             return HIGH;
         } else {
-            return HIGH;
+            return VERY_HIGH;
         }
     }
 
@@ -54,8 +54,30 @@ public enum AirState {
         return context.getText(id);
     }
 
-    public CharSequence getQuote(Context context) {
-        return "test 123";
+    public CharSequence getMessage(Context context) {
+        final int id;
+
+        switch (this) {
+            case VERY_HIGH:
+                id = R.string.excellent_air_message;
+                break;
+            case HIGH:
+                id = R.string.fair_air_message;
+                break;
+            case MEDIUM:
+                id = R.string.moderate_air_message;
+                break;
+            case LOW:
+                id = R.string.low_air_message;
+                break;
+            case VERY_LOW:
+                id = R.string.poor_air_message;
+                break;
+            default:
+                throw new IllegalStateException();
+        }
+
+        return context.getText(id);
     }
 
     public int getColor(Context context) {

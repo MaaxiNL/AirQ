@@ -80,6 +80,13 @@ public class Measurements implements Iterable<Measurement>, ValueEventListener {
         return children.size();
     }
 
+    public Measurement get(int position) {
+        final DataSnapshot snapshot = children.get(position);
+        final Measurement measurement = new Measurement(snapshot);
+
+        return measurement;
+    }
+
     private final class MeasurementIterator implements Iterator<Measurement> {
 
         private final Iterator<DataSnapshot> it;

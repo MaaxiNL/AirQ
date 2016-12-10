@@ -6,4 +6,10 @@
     <string name="moderate_air">Moderate Air Quality</string>
     <string name="low_air">Low Air Quality</string>
     <string name="poor_air">Poor Air Quality</string>
+
+    <string name="excellent_air_message">Enjoy your usual outdoor activities.</string>
+    <string name="fair_air_message">Enjoy your usual outdoor activities.</string>
+    <string name="moderate_air_message">Some can experience discomfort to the eyes and throat.</string>
+    <string name="low_air_message">Anyone experiencing discomfort such as sore eyes, cough or sore throat should consider reducing activity, particularly outdoors.</string>
+    <string name="poor_air_message">Reduce physical exertion, particularly outdoors, especially if you experience symptoms such as cough or sore throat.</string>
 </resources>
