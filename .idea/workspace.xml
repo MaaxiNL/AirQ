@@ -10,31 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adbe7335-b2bd-4bab-b419-499b6a0d5d51" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/MPAndroidChart_v3_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/AirFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/AirState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/graph.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/Measurement.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurement.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/Measurements.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/model/Measurements.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/MoonTileProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/providers/MoonTileProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/TestTileProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/providers/TestTileProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/WmsTileBounds.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/providers/WmsTileBounds.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/WmsTileProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/providers/WmsTileProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/GraphFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/nl/dannylamarti/airq/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-    </list>
+    <list default="true" id="adbe7335-b2bd-4bab-b419-499b6a0d5d51" name="Default" comment="" />
     <ignored path="AirQ.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
