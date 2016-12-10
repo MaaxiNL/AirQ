@@ -42,6 +42,8 @@ public class Measurements implements Iterable<Measurement>, ValueEventListener {
         for (DataSnapshot item : snapshot.getChildren()) {
             children.add(item);
         }
+
+        Collections.reverse(children);
     }
 
     @Override
@@ -59,33 +61,37 @@ public class Measurements implements Iterable<Measurement>, ValueEventListener {
     }
 
     public Measurement getFirst() {
-        return new Measurement(snapshot.child("0"));
+        return new Measurement(children.get(0));
     }
 
     public boolean isEmpty() {
-        return snapshot == null || snapshot.getChildrenCount() == 0;
+        return children.isEmpty();
+    }
+
+    public Measurement getLast() {
+        final int lastIndex = children.size() - 1;
+        final DataSnapshot snapshot = children.get(lastIndex);
+        final Measurement measurement = new Measurement(snapshot);
+
+        return measurement;
     }
 
     private final class MeasurementIterator implements Iterator<Measurement> {
 
-        final Iterator<DataSnapshot> wrapped;
+        private final Iterator<DataSnapshot> it;
 
         public MeasurementIterator() {
-            if (snapshot != null) {
-                wrapped = snapshot.getChildren().iterator();
-            } else {
-                wrapped = (Iterator) Collections.emptyList().iterator();
-            }
+            it = children.iterator();
         }
 
         @Override
         public boolean hasNext() {
-            return wrapped.hasNext();
+            return it.hasNext();
         }
 
         @Override
         public Measurement next() {
-            final DataSnapshot next = wrapped.next();
+            final DataSnapshot next = it.next();
             final Measurement measurement = new Measurement(next);
 
             return measurement;

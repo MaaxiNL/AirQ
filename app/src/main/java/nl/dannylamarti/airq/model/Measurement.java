@@ -1,6 +1,10 @@
 package nl.dannylamarti.airq.model;
 
+import android.support.annotation.Nullable;
+
 import com.google.firebase.database.DataSnapshot;
+
+import org.joda.time.DateTime;
 
 import java.util.Date;
 
@@ -28,7 +32,15 @@ public class Measurement {
     }
 
     public Date getDateTime() {
-        return (Date) snapshot.child("datetime").getValue();
+        return getDate("datetime");
+    }
+
+    @Nullable
+    private Date getDate(String name) {
+        final String value = (String) snapshot.child(name).getValue();
+        final Date date = new DateTime(value).toDate();
+
+        return date;
     }
 
     private float getFloat(String key) {
