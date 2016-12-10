@@ -51,7 +51,7 @@
     <com.jjoe64.graphview.GraphView
         android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="160dip"
         android:layout_centerInParent="true"
         android:layout_toRightOf="@+id/indicators"/>
 

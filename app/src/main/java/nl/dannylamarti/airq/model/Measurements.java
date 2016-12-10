@@ -67,15 +67,7 @@ public class Measurements implements Iterable<Measurement>, ValueEventListener {
     public boolean isEmpty() {
         return children.isEmpty();
     }
-
-    public Measurement getLast() {
-        final int lastIndex = children.size() - 1;
-        final DataSnapshot snapshot = children.get(lastIndex);
-        final Measurement measurement = new Measurement(snapshot);
-
-        return measurement;
-    }
-
+    
     public int size() {
         return children.size();
     }
