@@ -1,24 +1,31 @@
 package nl.dannylamarti.airq;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends FragmentActivity {
 
-    private GoogleMap map;
+    @BindView(R.id.tabs) TabLayout tabs;
+    @BindView(R.id.pager) ViewPager pager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            getFragmentManager()
-                    .beginTransaction()
-                    .add(android.R.id.content, new GraphFragment())
-                    .commit();
-        }
+        final MainAdapter adapter = new MainAdapter(getSupportFragmentManager());
+        final int white = ContextCompat.getColor(this, android.R.color.white);
+
+        setContentView(R.layout.main);
+        ButterKnife.bind(this);
+
+        tabs.setTabTextColors(white, white);
+        tabs.setupWithViewPager(pager);
+        pager.setAdapter(adapter);
     }
 
 }

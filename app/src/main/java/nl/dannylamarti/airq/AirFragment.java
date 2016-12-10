@@ -6,8 +6,8 @@ import android.util.DisplayMetrics;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
@@ -27,7 +27,7 @@ import nl.dannylamarti.airq.providers.WmsTileProvider;
  * Created by danny.lamarti on 10/12/16.
  */
 
-public class AirFragment extends MapFragment implements OnMapReadyCallback, Runnable {
+public class AirFragment extends SupportMapFragment implements OnMapReadyCallback, Runnable {
 
 
     private GoogleMap map;
@@ -81,7 +81,7 @@ public class AirFragment extends MapFragment implements OnMapReadyCallback, Runn
     private void removeMarkers() {
         final Iterator<Marker> it = markers.iterator();
 
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             final Marker marker = it.next();
 
             marker.remove();
