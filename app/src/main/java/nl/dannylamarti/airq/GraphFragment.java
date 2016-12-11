@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.FirebaseDatabase;
 import com.jjoe64.graphview.GraphView;
@@ -104,6 +105,9 @@ public class GraphFragment extends Fragment implements Runnable {
             message.setText(state.getMessage(context));
             chart.removeAllSeries();
             chart.addSeries(data);
+
+            if (state.isDangerouslyLow())
+                sendSmogAlert();
         } else {
             final int color = ContextCompat.getColor(context, R.color.colorPrimary);
 
@@ -138,6 +142,11 @@ public class GraphFragment extends Fragment implements Runnable {
         series.setThickness(thickness);
 
         return series;
+    }
+
+    private void sendSmogAlert() {
+        Toast.makeText(getActivity(), "Smog alert!", Toast.LENGTH_SHORT).show();
+        // TODO use CM to send a alarm...
     }
 
 }

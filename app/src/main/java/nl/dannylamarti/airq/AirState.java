@@ -105,4 +105,14 @@ public enum AirState {
 
         return ContextCompat.getColor(context, id);
     }
+
+    public boolean isDangerouslyLow() {
+        switch (this) {
+            case LOW:
+            case VERY_LOW:
+                return true;
+            default:
+                return false;
+        }
+    }
 }
